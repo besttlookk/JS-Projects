@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Number Facts</title>
+    <style>
+        #number-box{
+            display: none;
+            padding: 20px;
+            color: white;
+            border: 1px solid blue;
+            background-color: #333;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-7 mx-auto border border-dark bg-primary mt-5 ">
+        <h1 class="text-center text-white py-2">Number Facts</h1>
+        <form class="form" id="form">
+            <div class="form-group">
+                <input type="number" placeholder="Enter Number here" class="form-control p-2">
+            </div>
+        </form>
+    </div>
+    <div class="col-md-7 mx-auto mt-5 " id="number-box">
+        <h3 class="my-2">Fact:</h3>
+        <p id="facts"></p>
+    </div>
+</div>
+
+    
+</body>
+</html>

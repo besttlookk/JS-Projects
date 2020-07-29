@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ac7de5bac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="./main.js" defer></script>
+    <title>Zip-Code Location Info</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        h3,h6{
+            line-height: .8;
+        }
+        header{
+            background-color: #333;
+            height: 20vh;
+            border: 1px solid #333;
+        }
+
+        header div{
+            width: 70%;
+            
+        }
+
+        .card{
+            width: 80%;
+            display: none;
+            
+        }
+
+    
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mx-auto mt-2">
+            <h3 class="text-white">India Location Info</h3>
+            <h6 class="text-white mb-4">Enter a India Zipcode to get location info </h6>
+            <form class="form" id="form">
+                <input type="number" class="form-control" placeholder="Enter Zipcode">
+            
+            </form>
+
+        </div>
+        </header>
+    <div class="container">
+        <div class="card mx-auto mt-2 border border-success">
+            <h4 class="card-header text-white bg-success">Location Info.</h4>
+            <div class="card-body border-bottom border-success">
+                <p><b>City/Location: </b><span id="city"></span></p>
+                <p><b>State: </b><span id="state"></span></p>
+                <p><b>Longitude: </b><span id="long"></span></p>
+                <p><b>Latitude: </b><span id="lat"></span></p>
+            </div>
+           
+
+        </div>
+    </div>
+</body>
+</html>
