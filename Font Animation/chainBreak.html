@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ac7de5bac.js" crossorigin="anonymous"></script>
+    <title>Chain Break</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #icon{
+         
+            font-weight: bolder;
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i id="icon" class='fa'></i>
+    </div>
+
+
+    <script>
+        
+        function breakChain(){
+            const icon = document.getElementById('icon');
+            icon.innerHTML = "&#xf0c1";
+            setTimeout(()=>{
+                icon.innerHTML = "&#xf127";
+
+            }, 2000)
+        }
+
+        breakChain()
+
+        setInterval(breakChain,4000)
+    </script>
+</body>
+</html>

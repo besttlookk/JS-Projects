@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ac7de5bac.js" crossorigin="anonymous"></script>
+    <title>Battery Charging</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #icon{
+         
+            font-weight: bolder;
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Battery Charging</h2>
+    
+        <i id="icon" class='fa'></i>
+    </div>
+
+
+    <script>
+        
+        function batteryCharge(){
+            const icon = document.getElementById('icon');
+            icon.innerHTML = "&#xf244";
+            setTimeout(()=>{
+                icon.innerHTML = "&#xf243";
+
+                setTimeout(() => {
+                    icon.innerHTML = "&#xf242";
+
+                        setTimeout(() => {
+                        icon.innerHTML = "&#xf241";
+
+                            setTimeout(() => {
+                            icon.innerHTML = "&#xf240"
+                        }, 2000);
+                    }, 2000);
+                }, 2000);
+
+            }, 2000)
+        }
+
+        batteryCharge()
+
+        setInterval(batteryCharge,10000)
+    </script>
+</body>
+</html>

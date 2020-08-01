@@ -1,0 +1,58 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color: #333;
+    margin: 20px;
+}
+
+.grid-container{
+
+    max-width: 760px;
+    margin: auto;
+    border: 3px solid white;
+    background-color: white;
+}
+
+
+.main-img img{
+    width: 100%;
+
+}
+
+@keyframes fadeIn{
+    to {
+        opacity: 1;
+    }
+}
+
+.main-img img.fade{
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1 forwards;
+}
+
+.imgs img{
+    width: 100%;
+    height: 150px;
+    opacity: .6;
+
+}
+
+
+.imgs img:hover{
+    opacity: 1;
+}
+
+.imgs img.active{
+    opacity: .7;
+}
+
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}

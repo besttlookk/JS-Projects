@@ -1,0 +1,64 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    min-height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 300ms ease-in-out;
+    width: 500px;
+    max-width: 70%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal .modal-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.close-button{
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+    font-size: larger;
+    color: red;
+    cursor: pointer;
+}
+
+
+#overlay{
+    position: fixed;
+    background-color: rgb(0, 0, 0, .5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 300ms ease-in-out;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
